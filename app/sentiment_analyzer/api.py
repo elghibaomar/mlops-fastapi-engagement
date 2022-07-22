@@ -8,10 +8,10 @@ from fastapi import Depends, FastAPI
 from pydantic import BaseModel
 from fastapi.middleware.cors import CORSMiddleware
 import requests
-from bs4 import BeautifulSoup
+# from bs4 import BeautifulSoup
 
 
-from .classifier.model import Model, get_model
+# from .classifier.model import Model, get_model
 from .classifier.rf_model import Rf_Model, rf_get_model
 
 app = FastAPI()

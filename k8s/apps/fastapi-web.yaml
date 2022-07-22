@@ -1,22 +1,22 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: fastapi-k8s-web-deployment
+  name: fastapi-k8s-web-engagement-deployment
   labels:
-    app: fastapi-k8s-web-deployment
+    app: fastapi-k8s-web-engagement-deployment
 spec:
   replicas: 3
   selector:
     matchLabels:
-      app: fastapi-k8s-web-deployment
+      app: fastapi-k8s-web-engagement-deployment
   template:
     metadata:
       labels:
-        app: fastapi-k8s-web-deployment
+        app: fastapi-k8s-web-engagement-deployment
     spec:
       containers:
       - name: fastapi-k8s-web
-        image: elghibaomar/fastapi-k8s-web:latest
+        image: elghibaomar/fastapi-k8s-web-engagement:latest
         # imagePullPolicy: Always
         # envFrom:
         #   - secretRef:
@@ -35,7 +35,7 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: fastapi-k8s-web-service
+  name: fastapi-k8s-web-engagement-service
 spec:
   type: LoadBalancer
   ports:
@@ -44,4 +44,4 @@ spec:
       port: 80
       targetPort: 8003
   selector:
-    app: fastapi-k8s-web-deployment
+    app: fastapi-k8s-web-engagement-deployment
