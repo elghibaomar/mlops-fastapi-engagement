@@ -50,6 +50,7 @@ jobs:
       - name: Update Deployment image
         run: |
           kubectl set image deployment/fastapi-k8s-web-engagement-deployment fastapi-k8s-web-engagement=elghibaomar/fastapi-k8s-web-engagement:${GITHUB_SHA::7}-${GITHUB_RUN_ID::5}
+          
 
       - name: Wait for rollout to finish
         run: |
