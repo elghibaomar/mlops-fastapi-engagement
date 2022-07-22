@@ -15,7 +15,7 @@ spec:
         app: fastapi-k8s-web-engagement-deployment
     spec:
       containers:
-      - name: fastapi-k8s-web
+      - name: fastapi-k8s-web-engagement
         image: elghibaomar/fastapi-k8s-web-engagement:latest
         # imagePullPolicy: Always
         # envFrom:
